@@ -1,0 +1,32 @@
+------------------------------2|7|2024---------------------------------------------------------
+
+######################-DO WHILE-##############################
+1. realizar un programa que pida un numero entre 0 y 999 y muestre un mensaje de cauntos digitos tiene el mismo y que el 
+   ek programa termina cuando ingreso 0 con el siclo do while y con un if y scanf en c
+
+2. realizar un programa que permita ingresar el peso del numero de las personas que indique el usuario,se deve indicar 
+   cuantas personas pesan menos de 100 libras cuantas entre 100 y 150 cuantas entr 150 y 200 y cuantas mayor a 200
+   con do while e if y scanf
+
+
+
+#####################-ARREGLOS-######################
+3. realiza un programa con scanf que perimta el ingreso a 10 valores a un arreglo y muestre su promedio solo usando cosas basicas si es nesesarias como un for
+
+4. llenar un arreglo bidemensional de 3*3 y allar el valor maximo y minimo con solo for e if tambien recibiendo con scanf
+
+5. pedir el ingreso de los valores a dos arreglos diferentes y mostrar la suma de cada uno y mostrar cual de los dos es la suma mas grande
+
+
+####3###############-Funciones-##############################
+6. realiza una funcion para ver si los numeros ingresados con scanf es par o impar en c
+7. funcion para determinar la media de 3 numeros ingresados usando el void e int
+8. funcion para determinar la hoipotenusa de un triangulo utilizando el voi e int 
+
+condicionantes
+if switch 
+siclos 
+diferencia entre whilen dowhile for arreglos estructuras
+
+
+

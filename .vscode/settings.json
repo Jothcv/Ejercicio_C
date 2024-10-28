@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "math.h": "c",
+        "FuncionesConDEF.C": "cpp",
+        "stdlib.h": "c",
+        "productos.h": "c"
+    },
+    "git.ignoreLimitWarning": true,
+    "C_Cpp.errorSquiggles": "disabled"
+}

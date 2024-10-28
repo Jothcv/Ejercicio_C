@@ -1,0 +1,17 @@
+############################-Tarea cnavas-##############################
+condicionantes
+if switch 
+siclos 
+diferencia entre whilen dowhile for arreglos estructuras
+
+###################-TareaFunciones-###########################
+1. realizar un programa que permita el uso de un menu y me muestre: a) factorial de un numero b)tipo de caracter  c)ordenado  d)mayor y menor e)salir
+  el menu deve de repetirse hasta que se elija la obsion 
+  a) ingresar un numero y calcular el factorial
+  b) ingresar un caracter y determinar si  es un digito una vocal u otro caracter con un switch 
+  c) permita el ingreso de n cantidad de numeros a un arreglo y lo muestre ordenado 
+  d) realiza un programa que permita al usuario ingresar la cantidad de numeros que desee y mostrar el menor y mayor sin arrays
+  e) al seleccionar esto el usuario deve de cerrar el programa 
+  todo con scanf  y solo usando funciones de tipo int
+
+######################-estructuras-##################

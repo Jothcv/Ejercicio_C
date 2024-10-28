@@ -1,0 +1,35 @@
+#include <stdio.h> // 
+
+// Función para calcular el día de la semana utilizando el algoritmo de Zeller
+int calcularDiaSemana(int dia, int mes, int anio) {
+    // Si el mes es enero o febrero, se ajusta el mes y el año
+    if (mes < 3) {
+        mes += 12; // Enero se convierte en 13 y febrero en 14
+        anio -= 1; // Se resta 1 al año porque enero y febrero se consideran del año anterior
+    }
+    int k = anio % 100; // Últimos dos dígitos del año
+    int j = anio / 100; // Primeros dos dígitos del año
+    // Fórmula de Zeller para calcular el día de la semana
+    int h = (dia + 13 * (mes + 1) / 5 + k + k / 4 + j / 4 + 5 * j) % 7;
+    return h; // Devuelve el día de la semana (0 = sábado, 1 = domingo, ..., 6 = viernes)
+}
+
+// Función para convertir el resultado del algoritmo de Zeller a un día de la semana
+const char* obtenerNombreDia(int diaSemana) {
+    // Array de cadenas de caracteres con los nombres de los días de la semana
+    const char* dias[] = {"Sábado", "Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes"};
+    return dias[diaSemana]; // Devuelve el nombre del día correspondiente
+}
+
+int main() {
+    int dia, mes, anio; // Variables para almacenar la fecha de nacimiento
+    printf("Ingrese la fecha de nacimiento (dd mm aaaa): "); // Solicita al usuario que ingrese la fecha
+    scanf("%d %d %d", &dia, &mes, &anio); // Lee la fecha ingresada por el usuario
+
+    int diaSemana = calcularDiaSemana(dia, mes, anio); // Calcula el día de la semana
+    const char* nombreDia = obtenerNombreDia(diaSemana); // Obtiene el nombre del día de la semana
+
+    printf("El día de la semana en que nació es: %s\n", nombreDia); // Muestra el resultado
+
+    return 0; // Finaliza el programa
+}

@@ -1,0 +1,1 @@
+las tareas se entregadas el dia que no dio clases se encuentra en la carpeta 10-7-2024 me reuse a hacer la opcion de libros y resvistas porque es muy grande y no me reuso

@@ -1,0 +1,166 @@
+realiza un programa que pida 5 estudiantes que pida sus nombres y apellidos posteriormente pedirles 4 nota despues a esas cuatro notas 
+scarle el promedio a cada uno despues mostrar cuantos ganaron y cuantos perdieron ganaron mayores a 70 y perdieron los menores a 60 
+con estructuras y vectores en c 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+struct Estudiante {
+    int id;
+    char nombre[50];
+    char apellido[50];
+    char grado[10];
+    char seccion[10];
+    int edad;
+};
+
+void leerEstudiantes(struct Estudiante *estudiantes, int n) {
+    for (int i = 0; i < n; i++) {
+        printf("Ingrese datos del estudiante %d:\n", i + 1);
+        printf("ID: ");
+        scanf("%d", &estudiantes[i].id);
+        printf("Nombre: ");
+        scanf("%s", estudiantes[i].nombre);
+        printf("Apellido: ");
+        scanf("%s", estudiantes[i].apellido);
+        printf("Grado: ");
+        scanf("%s", estudiantes[i].grado);
+        printf("Sección: ");
+        scanf("%s", estudiantes[i].seccion);
+        printf("Edad: ");
+        scanf("%d", &estudiantes[i].edad);
+    }
+}
+
+// Función para encontrar el estudiante más grande y más pequeño en edad
+void encontrarExtremosEdad(struct Estudiante *estudiantes, int n) {
+    int maxEdad = estudiantes[0].edad;
+    int minEdad = estudiantes[0].edad;
+    int idxMax = 0, idxMin = 0;
+
+    for (int i = 1; i < n; i++) {
+        if (estudiantes[i].edad > maxEdad) {
+            maxEdad = estudiantes[i].edad;
+            idxMax = i;
+        }
+        if (estudiantes[i].edad < minEdad) {
+            minEdad = estudiantes[i].edad;
+            idxMin = i;
+        }
+    }
+
+    printf("El estudiante más grande es:\n");
+    printf("Nombre: %s %s, Edad: %d\n", estudiantes[idxMax].nombre,
+           estudiantes[idxMax].apellido, estudiantes[idxMax].edad);
+
+    printf("El estudiante más pequeño es:\n");
+    printf("Nombre: %s %s, Edad: %d\n", estudiantes[idxMin].nombre,
+           estudiantes[idxMin].apellido, estudiantes[idxMin].edad);
+}
+
+int main() {
+    int opcion, n;
+    printf("Menú:\n");
+    printf("1. Colegio\n");
+    printf("2. Tienda\n");
+    printf("3. Vectores\n");
+    printf("4. Libros o revistas\n");
+    printf("5. Agenda\n");
+    printf("6. Salir\n");
+    printf("Seleccione una opción: ");
+    scanf("%d", &opcion);
+
+    if (opcion == 1) {
+        printf("Ingrese el número de estudiantes: ");
+        scanf("%d", &n);
+        struct Estudiante estudiantes[n];
+        leerEstudiantes(estudiantes, n);
+        encontrarExtremosEdad(estudiantes, n);
+    } else if (opcion == 6) {
+        printf("¡Hasta luego!\n");
+    } else {
+        printf("Opción no válida. Intente nuevamente.\n");
+    }
+
+    return 0;
+}
